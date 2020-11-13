@@ -6,3 +6,9 @@ import reducers from '../reducers';
  * @param {object} state
  */
 export const mockedStore = (state) => createStoreAndMiddleware(reducers, state);
+
+/**
+ * Returns the string for a data-test element
+ * @param {string} id
+ */
+export const getTestAttr = (id) => `[data-test="${id}"]`;
