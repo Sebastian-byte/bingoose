@@ -1,5 +1,7 @@
 # Bingoose
 
+A minimal search utility that uses Bing/Google API and shows some results.
+
 ## Available Scripts
 
 In the project directory, you can run:
