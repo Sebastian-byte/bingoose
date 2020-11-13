@@ -34,7 +34,7 @@ const Results = ({ darkMode, onThemeToggle }) => {
   }, [dispatch, engine, text, isNotValidParams]);
 
   return (
-    <ResponsiveContext.Consumer>
+    <ResponsiveContext.Consumer data-test="results">
       {(size) => (
         <Box animation="fadeIn">
           {size === 'small' && (

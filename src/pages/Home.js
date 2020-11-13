@@ -7,7 +7,7 @@ import ThemeToggler from '../components/ThemeToggler';
  * @param {object} param0
  */
 const Home = ({ darkMode, onThemeToggle }) => (
-  <ResponsiveContext.Consumer>
+  <ResponsiveContext.Consumer data-test="home">
     {(size) => (
       <>
         <Box
