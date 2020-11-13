@@ -2,6 +2,16 @@
 
 A minimal search utility that uses Bing/Google API and shows some results.
 
+## Setup
+
+Add a `.env` file with the following settings:
+
+```bash
+REACT_APP_GOOGLE_API_KEY=
+REACT_APP_BING_API_KEY=
+REACT_APP_GOOGLE_ENGINE_ID=
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
