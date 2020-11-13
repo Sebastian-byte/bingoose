@@ -1,3 +1,5 @@
+import { parseGoogleData } from '../utils/engines';
+
 const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 const SEARCH_URL = 'https://www.googleapis.com/customsearch/v1';
 const ENGINE_ID = process.env.REACT_APP_GOOGLE_ENGINE_ID;
@@ -14,7 +16,7 @@ const search = async (query) => {
 
   let results = await fetch(`${SEARCH_URL}?${params}`);
   results = await results.json();
-  return results;
+  return parseGoogleData(results);
 };
 
 export default search;

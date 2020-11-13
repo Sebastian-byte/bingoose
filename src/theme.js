@@ -6,6 +6,14 @@ const theme = deepMerge(grommet, {
     colors: {
       brand: '#6FC0D9',
       secondary: '#FC8C29',
+      nav: {
+        dark: '#1C1C1C',
+        light: '#FAFAFA',
+      },
+      search: {
+        dark: 'transparent',
+        light: '#fefefe',
+      },
       background: {
         dark: '#1C1C1C',
         light: '#fefefe',

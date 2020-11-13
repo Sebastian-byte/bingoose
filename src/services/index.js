@@ -1,3 +1,3 @@
-export * as bingSearch from './bing';
-export * as googleSearch from './google';
-export * as multipleSearch from './multiple';
+export { default as bingSearch } from './bing';
+export { default as googleSearch } from './google';
+export { default as multipleSearch } from './multiple';

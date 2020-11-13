@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, List } from 'grommet';
 
-const ResultsList = ({ items }) => {
+const ResultList = ({ items }) => {
   return (
     <Box pad="large">
       <List data={items} />
@@ -9,4 +9,4 @@ const ResultsList = ({ items }) => {
   );
 };
 
-export default ResultsList;
+export default ResultList;
