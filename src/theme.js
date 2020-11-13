@@ -37,6 +37,13 @@ const theme = deepMerge(grommet, {
   button: {
     color: '#fefefe',
   },
+  list: {
+    item: {
+      // pad: { horizontal: 'large', vertical: 'xsmall' },
+      // background: ['white', 'light-2'],
+      border: false,
+    },
+  },
 });
 
 export default theme;

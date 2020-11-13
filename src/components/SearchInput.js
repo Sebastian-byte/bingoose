@@ -5,6 +5,10 @@ import { useHistory } from 'react-router-dom';
 
 const searchEngines = ['Google', 'Bing', 'Both'];
 
+/**
+ * Builds a custom search input component that listens on changes and key press
+ * @param {object} param0
+ */
 const SearchInput = ({ placeholder, children, text, engine }) => {
   const [query, setQuery] = useState(text || '');
   const [searchEngine, setSearchEngine] = useState(engine || 'Google');

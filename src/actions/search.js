@@ -21,11 +21,11 @@ const search = (engine, query) => async (dispatch) => {
   dispatch(onActionRequest());
   try {
     const elements = await searchEngines[engine](query);
-    console.log('elements => ', elements);
+    if (!elements) throw new Error('No items found.');
     dispatch(onActionSuccess(elements));
   } catch (error) {
     console.error(error);
-    dispatch(onActionFailure(error.message));
+    dispatch(onActionFailure(error.message || error));
   }
 };
 

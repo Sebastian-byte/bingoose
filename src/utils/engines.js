@@ -11,7 +11,7 @@ export const isValidEngine = (engine) =>
  */
 export const parseGoogleData = ({ items }) =>
   items.map(({ snippet, title, link }) => ({
-    name: title,
+    heading: title,
     url: link,
     snippet,
   }));
@@ -20,9 +20,9 @@ export const parseGoogleData = ({ items }) =>
  * Parses the object from bing api into a more readable stream
  * @param {object} param0
  */
-export const parseBingData = ({ items }) =>
-  items?.webPages?.value?.map(({ name, url, snippet }) => ({
-    name,
+export const parseBingData = ({ webPages }) =>
+  webPages?.value?.map(({ name, url, snippet }) => ({
+    heading: name,
     url,
     snippet,
   }));

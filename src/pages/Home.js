@@ -2,6 +2,10 @@ import { Box, Image, ResponsiveContext } from 'grommet';
 import SearchInput from '../components/SearchInput';
 import ThemeToggler from '../components/ThemeToggler';
 
+/**
+ * Main landing page container
+ * @param {object} param0
+ */
 const Home = ({ darkMode, onThemeToggle }) => (
   <ResponsiveContext.Consumer>
     {(size) => (

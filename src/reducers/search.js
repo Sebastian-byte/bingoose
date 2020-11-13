@@ -9,13 +9,13 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SEARCHING:
-      return { ...state, loading: true };
+      return { ...state, error: '', loading: true };
 
     case SEARCHING_SUCCESS:
-      return { ...state, elements: action.payload };
+      return { ...state, error: '', elements: action.payload, loading: false };
 
     case SEARCHING_FAILURE:
-      return { ...state, error: action.payload };
+      return { ...state, error: action.payload, elements: [], loading: false };
 
     default:
       return state;

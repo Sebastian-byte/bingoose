@@ -1,14 +1,20 @@
-import { Avatar, Box, Header, ResponsiveContext } from 'grommet';
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { useHistory, useLocation } from 'react-router-dom';
+import { Avatar, Box, Header, ResponsiveContext } from 'grommet';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import { isValidEngine } from '../utils/engines';
 import search from '../actions';
 import ResultList from '../components/ResultList';
 import SearchInput from '../components/SearchInput';
 import ThemeToggler from '../components/ThemeToggler';
+import ErrorMessage from '../components/ErrorMessage';
 
+/**
+ * Main Results Page that renders corresponding state search values
+ * @param {object} param0
+ */
 const Results = ({ darkMode, onThemeToggle }) => {
+  const { loading, error, elements } = useSelector((state) => state.search);
   const { search: urlParams } = useLocation();
   const history = useHistory();
   const dispatch = useDispatch();
@@ -44,7 +50,9 @@ const Results = ({ darkMode, onThemeToggle }) => {
           >
             <Box margin="2rem" direction="row" align="center" gap="small">
               {size !== 'small' && (
-                <Avatar src="small-logo.png" size="xlarge" />
+                <Link to="/">
+                  <Avatar src="small-logo.png" size="xlarge" />
+                </Link>
               )}
               <SearchInput text={text} engine={engine} />
             </Box>
@@ -54,7 +62,8 @@ const Results = ({ darkMode, onThemeToggle }) => {
               </Box>
             )}
           </Header>
-          <ResultList items={['lol']} />
+          <ResultList loading={loading} items={elements} />
+          {!loading && error !== '' && <ErrorMessage />}
         </Box>
       )}
     </ResponsiveContext.Consumer>
