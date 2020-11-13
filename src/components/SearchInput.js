@@ -27,7 +27,7 @@ const SearchInput = ({ placeholder, children, text, engine }) => {
   };
 
   return (
-    <Box direction="column">
+    <Box direction="column" data-test="search-input">
       <Box direction="row" gap="small">
         <Box
           background="search"

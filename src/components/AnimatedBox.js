@@ -8,6 +8,7 @@ export const StyledBox = styled(Box)`
 
 const AnimatedBox = ({ ...rest }) => (
   <StyledBox
+    data-test="animated-box"
     animation={{
       type: 'fadeOut',
       duration: 1900,

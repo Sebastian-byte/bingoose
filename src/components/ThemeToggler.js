@@ -7,9 +7,14 @@ import { Moon, Sun } from 'grommet-icons';
  * @param {object} param0
  */
 const ThemeToggler = ({ darkMode, onToggle }) => (
-  <Box pad="small" direction="row" alignSelf="end">
+  <Box pad="small" direction="row" alignSelf="end" data-test="theme-toggler">
     {darkMode ? <Sun /> : <Moon />}
-    <CheckBox checked={darkMode} onChange={() => onToggle(!darkMode)} toggle />
+    <CheckBox
+      data-test="check-box"
+      checked={darkMode}
+      onChange={() => onToggle(!darkMode)}
+      toggle
+    />
   </Box>
 );
 

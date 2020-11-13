@@ -5,7 +5,7 @@ import AnimatedBox from './AnimatedBox';
 /** Minimal Placeholder loader simulation */
 const PlaceholderLoading = () => {
   return (
-    <Box gap="medium">
+    <Box gap="medium" data-test="placeholder">
       <AnimatedBox height="12px" width="150px" />
       <AnimatedBox height="12px" width="100px" />
       <AnimatedBox height="12px" width="500px" />

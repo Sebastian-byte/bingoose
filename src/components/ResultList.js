@@ -10,7 +10,7 @@ const placeholders = Array.from(Array(10), (_, i) => (
 ));
 
 const renderList = (items) => (
-  <List data={items}>
+  <List data={items} data-test="list">
     {(datum) => (
       <Box>
         <Box width="xlarge">
@@ -41,7 +41,11 @@ const renderList = (items) => (
  * @param {object} param0
  */
 const ResultList = ({ items, loading }) => {
-  return <Box pad="large">{loading ? placeholders : renderList(items)}</Box>;
+  return (
+    <Box pad="large" data-test="result-list">
+      {loading ? placeholders : renderList(items)}
+    </Box>
+  );
 };
 
 export default ResultList;
