@@ -2,6 +2,8 @@
 
 A minimal search utility that uses Bing/Google API and shows some results.
 
+### [See Demo version](https://bingoose.vercel.app)
+
 ## Setup
 
 Add a `.env` file with the following settings:
